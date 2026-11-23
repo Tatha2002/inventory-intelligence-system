@@ -1,0 +1,16 @@
+sku,product_name,category,brand,warehouse,stock_quantity,reorder_level,purchase_price,selling_price,order_count,return_count,complaint_text,supplier_code,product_image_name,historical_demand_label
+SKU105,Running Shoes,Fashion/Footwear,Nike,Delhi,12,20,1800,2499,150,12,Size issue,SUP05,shoes.png,High
+SKU107,Basmati Rice 1kg,Grocery/Food,India Gate,Mumbai,18,25,90,130,95,14,Packaging damage,SUP07,rice1kg.png,Medium
+SKU108,Office Chair,Furniture/Office,Green Soul,Delhi,4,8,3500,4999,45,2,,SUP08,chair.png,Medium
+SKU110,Jeans,Fashion/Men,Levis,Mumbai,7,15,900,1499,110,22,Size issue,SUP10,jeans.png,High
+SKU112,LED Bulb,Electronics/Home,Philips,Kolkata,9,20,90,149,130,8,Product not working,SUP11,bulb.png,Medium
+SKU114,Backpack,Fashion/Accessories,Wildcraft,Delhi,6,12,700,1199,75,15,Zip quality issue,SUP13,bag.png,High
+SKU117,Headphones,Electronics/Audio,boAt,Delhi,3,10,800,1299,140,25,Sound quality issue,SUP04,headphones.png,High
+SKU118,Green Tea,Grocery/Beverages,Tata,Kolkata,16,20,180,249,85,6,,SUP15,tea.png,Medium
+SKU120,Power Bank,Electronics/Accessories,Ambrane,Delhi,8,15,650,999,120,9,,SUP17,powerbank.png,High
+SKU123,Wireless Keyboard,Electronics/Accessories,Logitech,Delhi,5,12,900,1399,70,4,,SUP01,keyboard.png,Medium
+SKU125,Floor Cleaner,Home/Cleaning,Lizol,Mumbai,2,10,120,179,90,18,Leakage issue,SUP21,cleaner.png,Medium
+SKU129,Printer,Electronics/Office,HP,Delhi,4,6,8500,10999,30,3,Paper feed issue,SUP25,printer.png,Medium
+SKU130,Electric Kettle,Home/Kitchen,Prestige,Kolkata,10,12,950,1399,80,9,,SUP26,kettle.png,High
+SKU102,Cotton T Shirt,Fashion/Men,Roadster,Delhi,5,15,250,499,80,18,Size issue,SUP02,tshirt.png,Medium
+SKU104,Bluetooth Speaker,Electronics/Audio,boAt,Mumbai,8,8,900,1499,60,3,,SUP04,speaker.png,Low

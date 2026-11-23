@@ -1,0 +1,27 @@
+sku,product_name,category,brand,warehouse,stock_quantity,reorder_level,purchase_price,selling_price,order_count,return_count,complaint_text,supplier_code,product_image_name,historical_demand_label
+SKU105,Running Shoes,Fashion/Footwear,Nike,Delhi,12,20,1800,2499,150,12,Size issue,SUP05,shoes.png,High
+SKU106,Smart Watch,Electronics/Wearables,Noise,Kolkata,35,15,2200,2999,180,6,,SUP06,watch.png,High
+SKU107,Basmati Rice 1kg,Grocery/Food,India Gate,Mumbai,18,25,90,130,95,14,Packaging damage,SUP07,rice1kg.png,Medium
+SKU108,Office Chair,Furniture/Office,Green Soul,Delhi,4,8,3500,4999,45,2,,SUP08,chair.png,Medium
+SKU109,USB Cable,Electronics/Accessories,Portronics,Kolkata,60,30,120,199,250,10,,SUP09,usb.png,High
+SKU110,Jeans,Fashion/Men,Levis,Mumbai,7,15,900,1499,110,22,Size issue,SUP10,jeans.png,High
+SKU111,Cooking Oil 1L,Grocery/Food,Fortune,Delhi,28,20,110,145,170,5,,SUP03,oil.png,High
+SKU112,LED Bulb,Electronics/Home,Philips,Kolkata,9,20,90,149,130,8,Product not working,SUP11,bulb.png,Medium
+SKU113,Water Bottle,Home/Kitchen,Milton,Mumbai,42,25,250,399,90,4,,SUP12,bottle.png,Medium
+SKU114,Backpack,Fashion/Accessories,Wildcraft,Delhi,6,12,700,1199,75,15,Zip quality issue,SUP13,bag.png,High
+SKU115,Laptop Stand,Electronics/Accessories,Portronics,Kolkata,20,10,450,799,65,3,,SUP09,stand.png,Medium
+SKU116,Notebook,Stationery/Books,Classmate,Mumbai,100,50,35,55,300,7,,SUP14,notebook.png,High
+SKU117,Headphones,Electronics/Audio,boAt,Delhi,3,10,800,1299,140,25,Sound quality issue,SUP04,headphones.png,High
+SKU118,Green Tea,Grocery/Beverages,Tata,Kolkata,16,20,180,249,85,6,,SUP15,tea.png,Medium
+SKU119,Study Table,Furniture/Home,Ikea,Mumbai,11,5,4200,5999,35,1,,SUP16,table.png,Low
+SKU120,Power Bank,Electronics/Accessories,Ambrane,Delhi,8,15,650,999,120,9,,SUP17,powerbank.png,High
+SKU121,Formal Shirt,Fashion/Men,Peter England,Kolkata,14,10,650,999,95,11,Size issue,SUP18,shirt.png,Medium
+SKU122,Shampoo 200ml,Personal Care,Dove,Mumbai,25,20,140,199,160,8,,SUP19,shampoo.png,High
+SKU123,Wireless Keyboard,Electronics/Accessories,Logitech,Delhi,5,12,900,1399,70,4,,SUP01,keyboard.png,Medium
+SKU124,Almonds 500g,Grocery/Dry Fruits,California Almonds,Kolkata,30,15,350,499,100,3,,SUP20,almonds.png,High
+SKU125,Floor Cleaner,Home/Cleaning,Lizol,Mumbai,2,10,120,179,90,18,Leakage issue,SUP21,cleaner.png,Medium
+SKU126,Smartphone Cover,Electronics/Accessories,Spigen,Delhi,45,20,250,399,210,5,,SUP22,cover.png,High
+SKU127,Football,Sports/Equipment,Nivia,Kolkata,13,10,450,699,55,2,,SUP23,football.png,Low
+SKU128,Face Wash,Personal Care,Himalaya,Mumbai,19,15,110,159,125,7,,SUP24,facewash.png,Medium
+SKU129,Printer,Electronics/Office,HP,Delhi,4,6,8500,10999,30,3,Paper feed issue,SUP25,printer.png,Medium
+SKU130,Electric Kettle,Home/Kitchen,Prestige,Kolkata,10,12,950,1399,80,9,,SUP26,kettle.png,High

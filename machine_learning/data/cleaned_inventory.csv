@@ -1,0 +1,27 @@
+stock_quantity,reorder_level,order_count,return_count,selling_price,category,brand,warehouse,supplier_code,historical_demand_label
+12.0,20,150.0,12.0,2499,Fashion/Footwear,Nike,Delhi,SUP05,High
+35.0,15,180.0,6.0,2999,Electronics/Wearables,Noise,Kolkata,SUP06,High
+18.0,25,95.0,14.0,130,Grocery/Food,India Gate,Mumbai,SUP07,Medium
+4.0,8,45.0,2.0,3199,Furniture/Office,Green Soul,Delhi,SUP08,Medium
+57.25,30,250.0,10.0,199,Electronics/Accessories,Portronics,Kolkata,SUP09,High
+7.0,15,110.0,20.875,1499,Fashion/Men,Levis,Mumbai,SUP10,High
+28.0,20,170.0,5.0,145,Grocery/Food,Fortune,Delhi,SUP03,High
+9.0,20,130.0,8.0,149,Electronics/Home,Philips,Kolkata,SUP11,Medium
+42.0,25,90.0,4.0,399,Home/Kitchen,Milton,Mumbai,SUP12,Medium
+6.0,12,75.0,15.0,1199,Fashion/Accessories,Wildcraft,Delhi,SUP13,High
+20.0,10,65.0,3.0,799,Electronics/Accessories,Portronics,Kolkata,SUP09,Medium
+57.25,35,254.375,7.0,55,Stationery/Books,Classmate,Mumbai,SUP14,High
+3.0,10,140.0,20.875,1299,Electronics/Audio,boAt,Delhi,SUP04,High
+16.0,20,85.0,6.0,249,Grocery/Beverages,Tata,Kolkata,SUP15,Medium
+11.0,5,35.0,1.0,3199,Furniture/Home,Ikea,Mumbai,SUP16,Low
+8.0,15,120.0,9.0,999,Electronics/Accessories,Ambrane,Delhi,SUP17,High
+14.0,10,95.0,11.0,999,Fashion/Men,Peter England,Kolkata,SUP18,Medium
+25.0,20,160.0,8.0,199,Personal Care,Dove,Mumbai,SUP19,High
+5.0,12,70.0,4.0,1399,Electronics/Accessories,Logitech,Delhi,SUP01,Medium
+30.0,15,100.0,3.0,499,Grocery/Dry Fruits,California Almonds,Kolkata,SUP20,High
+2.0,10,90.0,18.0,179,Home/Cleaning,Lizol,Mumbai,SUP21,Medium
+45.0,20,210.0,5.0,399,Electronics/Accessories,Spigen,Delhi,SUP22,High
+13.0,10,55.0,2.0,699,Sports/Equipment,Nivia,Kolkata,SUP23,Low
+19.0,15,125.0,7.0,159,Personal Care,Himalaya,Mumbai,SUP24,Medium
+4.0,6,30.0,3.0,3199,Electronics/Office,HP,Delhi,SUP25,Medium
+10.0,12,80.0,9.0,1399,Home/Kitchen,Prestige,Kolkata,SUP26,High

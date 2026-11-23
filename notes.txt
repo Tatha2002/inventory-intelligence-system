@@ -1,0 +1,62 @@
+INVENTORY INTELLIGENCE WEB APPLICATION
+NOTES.TXT
+
+1. IMPORTANT ASSUMPTIONS
+
+- The application uses PostgreSQL as its primary database.
+- Product inventory is maintained through inventory batches associated with products and warehouses.
+- A product is considered low-stock when its stock quantity is less than or equal to its reorder level.
+- Demand prediction uses historical inventory and order-related information.
+- Demand risk is determined using the predicted demand and current stock conditions.
+- User access is controlled through authentication and role-based permissions.
+- CSV uploads are expected to follow the required column format. Invalid rows and missing values are handled during data processing.
+- Product images and other uploaded media are stored separately from static application files.
+
+2. MACHINE LEARNING IMPLEMENTATION
+
+- The demand prediction module uses Pandas and NumPy for data preprocessing.
+- Input features include stock quantity, reorder level, order count, return count, selling price, category, brand, warehouse, and supplier code.
+- Categorical values are encoded before model prediction.
+- The trained Scikit-learn model and supporting preprocessing information are saved using Pickle.
+- Model files include demand_model.pkl, encoders.pkl, and model_metadata.pkl.
+- During prediction, the saved model is loaded and used to predict the demand label.
+- The system assigns HIGH, MEDIUM, or LOW reorder risk based on the prediction and stock conditions.
+- Prediction results are stored in DemandPredictionHistory for future reference.
+- Matplotlib is used for model evaluation visualizations, including confusion matrices.
+
+3. NLP IMPLEMENTATION
+
+- NLTK is used to process complaint text submitted through the application.
+- The NLP workflow includes text cleaning, tokenization, and text preprocessing.
+- Complaint text is processed to extract useful information for sentiment analysis and complaint categorization.
+- POS tagging is used to identify grammatical information in the complaint text.
+- The complaint analysis process runs through a Celery background task, allowing users to monitor its execution status.
+
+4. DEEP LEARNING IMPLEMENTATION
+
+- TensorFlow and Keras are used for the deep-learning prototype.
+- A ResNet50-based image classification experiment is implemented using the Fashion-MNIST dataset.
+- Image preprocessing includes converting grayscale images into RGB format, resizing images, and applying ResNet50 preprocessing.
+- The dataset is divided into training, validation, and testing sets.
+- The model is evaluated using classification metrics and a confusion matrix.
+- This implementation demonstrates the deep-learning image classification workflow and serves as a prototype rather than a production-grade product defect detection system.
+
+5. CELERY AND REDIS
+
+- Celery is used to execute time-consuming operations in the background.
+- Inventory uploads and demand prediction are processed asynchronously.
+- Complaint analysis is also executed through background processing.
+- Redis is configured as the Celery message broker.
+- Task progress and execution results can be monitored through task status endpoints.
+- Task states include PENDING, STARTED, PROGRESS, SUCCESS, and FAILURE.
+
+6. KNOWN LIMITATIONS
+
+- Prediction quality depends on the quality, quantity, and accuracy of the available training dataset.
+- Demand predictions are estimates and should not be treated as guaranteed future sales.
+- The demand model requires its saved model and encoder files to be available before prediction.
+- The deep-learning experiment uses Fashion-MNIST, so it does not directly establish real-world product defect detection accuracy.
+- NLP results depend on complaint text quality and the trained or configured analysis pipeline.
+- The application is designed as a local working prototype and may require additional optimization and validation before production deployment.
+
+END OF NOTES
