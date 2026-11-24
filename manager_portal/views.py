@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Q
 
-from inventory.models import Product
+from inventory.models import Product, ProductImage
 from inventory.forms import ProductForm
 
 from django.db import transaction
@@ -68,10 +68,16 @@ def product_detail(request, pk):
 @login_required
 @user_passes_test(is_manager)
 def product_create(request):
-    form = ProductForm(request.POST if request.method == "POST" else None)
+    form = ProductForm(request.POST or None)
+
     if request.method == "POST" and form.is_valid():
-        form.save()
+        product = form.save()
+
+        for image in request.FILES.getlist("images"):
+            ProductImage.objects.create(product=product, image=image)
+
         return redirect("product_list")
+
     return render(request, "manager/product_form.html", {"form": form, "title": "Add Product"})
 
 
@@ -79,13 +85,17 @@ def product_create(request):
 @user_passes_test(is_manager)
 def product_update(request, pk):
     product = get_object_or_404(Product, pk=pk)
-    form = ProductForm(request.POST if request.method == "POST" else None, instance=product)
+    form = ProductForm(request.POST or None, instance=product)
+
     if request.method == "POST" and form.is_valid():
-        form.save()
+        product = form.save()
+
+        for image in request.FILES.getlist("images"):
+            ProductImage.objects.create(product=product, image=image)
+
         return redirect("product_list")
+
     return render(request, "manager/product_form.html", {"form": form, "title": "Update Product"})
-
-
 
 @login_required
 @permission_required('manage_stock')

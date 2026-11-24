@@ -16,4 +16,5 @@ urlpatterns = [
         views.return_detail,
         name="staff-return-detail"
     ),
+    path("reorder-alerts/", views.reorder_alerts, name="staff-reorder-alerts"),
 ]

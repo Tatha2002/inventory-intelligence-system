@@ -1,11 +1,6 @@
-
 from rest_framework import serializers
 
-from inventory.models import (
-    Product,
-    Supplier,
-    Complaint,
-)
+from inventory.models import (Product,Supplier,Complaint,)
 from machine_learning.models import DemandPredictionHistory
 
 

@@ -14,6 +14,7 @@ urlpatterns = [
     path("machine-learning/", include("machine_learning.urls")),
     path("nlp/", include("nlp.urls")),
     path('api/', include('api.urls')),
+    path("staff/ann/", include("ann_prediction.urls")),
 ]
 
 

@@ -1,4 +1,3 @@
-
 import re
 
 from core_python.exceptions import InvalidSKUError, InvalidSupplierCodeError, InvalidNumericFieldError

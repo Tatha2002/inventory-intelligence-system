@@ -1,4 +1,3 @@
-
 import os
 import uuid
 
@@ -18,12 +17,7 @@ from rest_framework.exceptions import PermissionDenied
 
 from accounts.authentication import JWTAuthentication
 
-from inventory.models import (
-    Product,
-    Supplier,
-    Complaint,
-    InventoryBatch,
-)
+from inventory.models import (Product, Supplier, Complaint, InventoryBatch,)
 
 from machine_learning.models import DemandPredictionHistory
 from machine_learning.tasks import generate_demand_prediction_task
@@ -40,10 +34,7 @@ from .serializers import (
     DashboardSerializer,
 )
 
-from .permissions import (
-    IsAdminOrManager,
-    IsManagerOrStaff,
-)
+from .permissions import (IsAdminOrManager, IsManagerOrStaff,)
 
 
 # --------------------------------------------------
@@ -52,9 +43,7 @@ from .permissions import (
 
 class ProductViewSet(viewsets.ModelViewSet):
 
-    queryset = Product.objects.select_related(
-        "category", "supplier"
-    ).all()
+    queryset = Product.objects.select_related("category", "supplier").all()
 
     serializer_class = ProductSerializer
 
@@ -132,14 +121,9 @@ class ComplaintListCreateAPIView(APIView):
                 "Only Admin and Store Manager can view complaints."
             )
 
-        complaints = Complaint.objects.select_related(
-            "product"
-        ).all().order_by("-created_at")
+        complaints = Complaint.objects.select_related("product").all().order_by("-created_at")
 
-        serializer = ComplaintSerializer(
-            complaints,
-            many=True
-        )
+        serializer = ComplaintSerializer(complaints, many=True)
 
         return Response(serializer.data)
 
@@ -409,9 +393,7 @@ class DashboardSummaryAPIView(APIView):
             )["total"] or 0
         )
 
-        low_stock_items = InventoryBatch.objects.filter(
-            stock_quantity__lte=F("reorder_level")
-        ).count()
+        low_stock_items = InventoryBatch.objects.filter(stock_quantity__lte=F("reorder_level")).count()
 
         open_complaints = Complaint.objects.filter(
             status="OPEN"

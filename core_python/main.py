@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 from core_python.file_handler import read_inventory_file

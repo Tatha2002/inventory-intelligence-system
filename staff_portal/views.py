@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from django.db.models import Sum
+from django.db.models import Sum, F
 from inventory.models import Product, InventoryBatch
 
 from django.contrib import messages
@@ -117,3 +117,24 @@ def return_detail(request, pk):
             "allowed_statuses": allowed_statuses
         }
     )
+
+
+@login_required
+def reorder_alerts(request):
+    if request.user.role != "INVENTORY_STAFF":
+        raise PermissionDenied
+
+    alerts = InventoryBatch.objects.filter(stock_quantity__lte=F("reorder_level"), product__is_discontinued=False).select_related("product", "product__category", "product__supplier", "warehouse").order_by("stock_quantity")
+
+    total_alerts = alerts.count()
+    out_of_stock_count = alerts.filter(stock_quantity=0).count()
+    low_stock_count = total_alerts - out_of_stock_count
+
+    context = {
+        "alerts": alerts,
+        "total_alerts": total_alerts,
+        "out_of_stock_count": out_of_stock_count,
+        "low_stock_count": low_stock_count,
+    }
+
+    return render(request, "staff_portal/reorder_alerts.html", context)

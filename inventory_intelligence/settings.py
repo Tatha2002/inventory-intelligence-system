@@ -61,7 +61,8 @@ INSTALLED_APPS = [
     'machine_learning',
     'nlp',
     'api',
-    'permissionApp'
+    'permissionApp',
+    'ann_prediction',
 ]
 
 MIDDLEWARE = [
